@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Form Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        form {
+            max-width: 500px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        fieldset {
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+        }
+        legend {
+            font-weight: bold;
+            padding: 0 10px;
+            font-size: 16px;
+        }
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            width: 150px;
+            margin-right: 10px;
+            text-align: right;
+            font-weight: bold;
+        }
+        .form-group input {
+            flex: 1;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        .form-group input[type="radio"],
+        .form-group input[type="checkbox"] {
+            flex: 0;
+            margin-left: 0;
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-left: 160px; /* aligns with input fields */
+        }
+        .buttons input {
+            padding: 10px 20px;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .buttons input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+        }
+        .buttons input[type="submit"]:hover {
+            background-color: #218838;
+        }
+        .buttons input[type="button"] {
+            background-color: #007bff;
+            color: white;
+        }
+        .buttons input[type="button"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <form action="f4.html" method="post">
+        <!-- User Info Fieldset -->
+        <fieldset>
+            <legend>User Info</legend>
+
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+
+            <div class="form-group">
+                <label>Choose Option:</label>
+                <input type="radio" id="option1" name="option" value="option1">
+                <label for="option1" style="text-align:left; margin-left:5px;">Option 1</label>
+            </div>
+
+            <div class="form-group">
+                <label>Hobbies:</label>
+                <input type="checkbox" id="cricket" name="cricket" value="cricket">
+                <label for="cricket" style="text-align:left; margin-left:5px;">Cricket</label>
+            </div>
+
+        </fieldset>
+
+        <!-- Buttons -->
+        <div class="buttons">
+            <input type="submit" value="Submit">
+            <!-- <input type="button" value="Button"> -->
+        </div>
+    </form>
+
+    <form action="f5.html" method="post" target="_blank" application="" multipart="">
+        <fieldset>
+            <label> First Name:</label> <input type="text" name="name"><br><br>
+            <label> User Name:</label> <input type="text" name="userName"><br><br>
+            <label> Password:</label> <input type="password" name="password"><br><br>
+            <label> Email:</label> <input type="email" name="email" required autofocus><br><br>
+            <label> Gender:</label> 
+            <input type="radio" name="gender" value="Male">Male
+            <input type="radio" name="gender" value="Female">Female<br><br>
+
+            <label> Sports: </label>
+            <input type="checkbox" name="SportsCricket" value="Cricket">Cricket
+            <input type="checkbox" name="SportsFootball" value="Football">Football
+            <input type="checkbox" name="SportsTennis" value="Tennis">Tennis<br><br>
+            <input type="submit" value="Signup">
+        </fieldset>
+    </form>
+</body>
+</html>
