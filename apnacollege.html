@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script src="learnvern.js"></script>
+
+  <script type="text/javascript" >
+    document.writeln("<h1> Creating an object in JavaScript</h1>")
+
+
+    let person = {
+      firstName: "Shariq",
+      lastName: "Ismail",
+      age: 39,
+      eyeColor: "black"
+  };
+
+  console.log(`object details are ${JSON.stringify(person)}`)
+  
+    var employee = new Object;
+
+    employee.id = 2;
+    employee.name = "Faizan Ismail"
+    employee.salary = 120000;
+
+    for (value in employee) {
+      console.log(value)
+    }
+
+    let emp = {
+      id: 1,
+      name: "Shariq Ismail",
+      salary: 85000
+    }
+
+console.log(emp)
+
+console.log(employee)
+
+document.writeln(JSON.stringify(emp) + "<br>");
+document.writeln(JSON.stringify(employee) + "<br>")
+
+function employee2(id, name, salary) {
+  this.id = id;
+  this.name = name;
+  this.salary = salary;
+
+  let e = new employee2(3,"Ibrahim Shariq", 5000);
+
+  document.writeln("<br> Object details of employee object : ")
+  for (value in e){
+    document.writeln(e[value] + " ");
+  }
+}
+
+
+  </script>
+</body>
+</html>
