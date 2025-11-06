@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Combinations</title>
+  <style type="text/css">
+    /* Paragraphs that come after <h1> */
+    h1 ~ p {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #4b0082; /* Indigo — symbolizes quality and luxury */
+      text-align: center;
+      margin: 30px;
+      line-height: 1.5;
+    }
+
+    /* List items inside <ul> */
+    ul li {
+      font-family: 'Arial', sans-serif;
+      color: #000654; /* Deep blue — professionalism and reliability */
+      margin: 15px 0;
+      line-height: 1.6;
+      padding: 10px 12px;
+      background-color: #eef5ff; /* Light blue background for a calm aesthetic */
+      border-left: 4px solid #000654; /* Accent border for emphasis */
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    /* Add a smooth hover effect for UX polish */
+    ul li:hover {
+      background-color: #d6e4ff;
+      color: #1a237e;
+      transform: translateX(5px);
+      cursor: pointer;
+    }
+
+    /* === ADJACENT SIBLING SELECTOR EXAMPLES === */
+    
+    /* Style the product immediately after Kitchen Hinges */
+    .product[data-type="kitchen-hinges"] + .product {
+      background-color: #e6f7ff;
+      border-left: 4px solid #1890ff;
+      font-weight: bold;
+    }
+    
+    /* Style the product immediately after Bathroom Set */
+    .product[data-type="bathroom-set"] + .product {
+      background-color: #f6ffed;
+      border-left: 4px solid #52c41a;
+    }
+    
+    /* Style the product immediately after Door Locks */
+    .product[data-type="door-locks"] + .product {
+      background-color: #fff2e8;
+      border-left: 4px solid #fa8c16;
+    }
+    
+    /* Style the brand immediately after Yale */
+    .brand[data-name="yale"] + .brand {
+      background-color: #f9f0ff;
+      border-left: 4px solid #722ed1;
+      font-weight: bold;
+    }
+    
+    /* Style the product immediately after Furniture Handles */
+    .product[data-type="furniture-handles"] + .product::before {
+      content: "→ Recommended Pair";
+      color: #52c41a;
+      font-weight: bold;
+      display: block;
+    }
+    
+    /* Style the product immediately after Soap Dish */
+    .product[data-type="soap-dish"] + .product {
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    /* Style the product immediately after Laundry Basket */
+    .product[data-type="laundry-basket"] + .product {
+      background: linear-gradient(45deg, #ffe4b5, #ffd700);
+      color: #8b4513;
+    }
+    
+    /* === GENERAL STYLING FOR PRODUCTS AND BRANDS === */
+    .product, .brand {
+      padding: 12px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      font-family: 'Arial', sans-serif;
+      transition: all 0.3s ease;
+    }
+    
+    .product {
+      background-color: #f5f5f5;
+      border-left: 4px solid #d9d9d9;
+    }
+    
+    .brand {
+      background-color: #f0f5ff;
+      border-left: 4px solid #adc6ff;
+    }
+    
+    .section-title {
+      color: #1890ff;
+      border-bottom: 2px solid #1890ff;
+      padding-bottom: 5px;
+      margin-top: 40px;
+    }
+
+    .tac p {
+      font-style: italic;
+      color: #555;
+      text-align: center;
+    }
+
+    h4 + p {
+      font-family: 'Calibri', sans-serif;
+      color: #333333;
+      margin: 20px;
+      line-height: 1.6;
+      border: #8b4513 2px dashed;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 90px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Premium build quality</h1>
+
+  <p>
+    🛠️ "Crafted with Precision, Built to Last"
+    <br /><br />
+    Soft-close functionality<br />
+    Elegant brushed finish<br /><br />
+    Maintenance-free mechanism<br />
+    Trusted by architects & designers
+  </p>
+
+  <h2>🏆 "Excellence in Every Element"</h2>
+
+  <ul>
+    <li>
+      → Emphasizes the superior craftsmanship and attention to detail in MoonaSons
+      products.
+    </li>
+    <li>🏡 “Building Homes, One Detail at a Time”</li>
+    <li>
+      → Conveys the idea of creating comfortable and stylish living spaces through
+      quality products.
+    </li>
+    <li>🔧 “Engineered for Elegance and Ease”</li>
+  </ul>
+
+  <!-- // examples of adjecents siblings and general sibling combinators // -->
+  
+  <h3 class="section-title">Adjacent Sibling Selector Examples</h3>
+  
+  <h4>Product Combinations</h4>
+  <div class="product" data-type="kitchen-hinges">KITCHEN HINGES</div>
+  <div class="product" data-type="wardrobe-lifter">WARDROBE LIFTER</div>
+  <div class="product" data-type="bathroom-set">BATHROOM SET</div>
+  <div class="product" data-type="dead-bolt">DEAD BOLT</div>
+  <div class="product" data-type="door-locks">DOOR LOCKS</div>
+  <div class="product" data-type="shelf">SHELF</div>
+  <div class="product" data-type="furniture-handles">FURNITURE HANDLES</div>
+  <div class="product" data-type="aluminium-section">ALUMINIUM SECTION</div>
+  <div class="product" data-type="soap-dish">SOAP DISH</div>
+  <div class="product" data-type="cloth-hook">CLOTH HOOK</div>
+  <div class="product" data-type="laundry-basket">LAUNDRY BASKET</div>
+  <div class="product" data-type="towel-ring">TOWEL RING</div>
+  
+  <h4>Brand Combinations</h4>
+  <div class="brand" data-name="yale">YALE</div>
+  <div class="brand" data-name="smc">SMC</div>
+  <div class="brand" data-name="khas">KHAS</div>
+  <div class="brand" data-name="mandelli">MANDELLI</div>
+  <div class="brand" data-name="ducsse">DUCASSE</div>
+  <div class="brand" data-name="solex">SOLEX</div>
+  
+  <h3 class="section-title">How Adjacent Sibling Selectors Work</h3>
+  <ul>
+    <li><strong>KITCHEN HINGES + WARDROBE LIFTER:</strong> Wardrobe lifter is highlighted because it comes immediately after kitchen hinges</li>
+    <li><strong>BATHROOM SET + DEAD BOLT:</strong> Dead bolt gets a green accent as it follows bathroom set</li>
+    <li><strong>DOOR LOCKS + SHELF:</strong> Shelf gets an orange border as it follows door locks</li>
+    <li><strong>YALE + SMC:</strong> SMC brand is highlighted as it follows Yale</li>
+    <li><strong>FURNITURE HANDLES + ALUMINIUM SECTION:</strong> Shows "Recommended Pair" label</li>
+    <li><strong>SOAP DISH + CLOTH HOOK:</strong> Cloth hook gets enlarged and shadowed</li>
+    <li><strong>LAUNDRY BASKET + TOWEL RING:</strong> Towel ring gets a golden gradient</li>
+  </ul>
+
+  <h4>
+    Versatile Shoe Racks and Towel Rods for Every Interior
+
+  </h4>
+
+  <p>
+    → Our shoe racks and towel rods are designed to seamlessly integrate into any
+    interior style, providing both functionality and aesthetic appeal. Whether you
+    prefer a modern, minimalist look or a more traditional design, our products
+    offer the versatility to complement your space while keeping your essentials
+    organized and accessible.
+  </p>
+  <p>
+    🏡 “Building Homes, One Detail at a Time”
+    <br /><br />
+    Our hardware quietly carries your vision — from the first sketch to the final
+    touch your clients adore.
+  </p>
+  <p>
+    Every door tells a story. Moonasons’ handles and closers ensure yours speaks of quiet confidence. From sliding systems that glide like silk to door closers that whisper shut, our hardware transforms thresholds into transitions. Crafted for Pakistani hospitality and heavy use, they’re the first touch of sanctuary – and the last line of defense.
+  </p>
+  <div id="tac">
+    "Whispers," "glide like silk," "warm to the touch" → activates tactile imagination
+
+    <p>
+      → Suggests a blend of sophisticated design and user-friendly functionality.
+      <br />
+      → Appeals to professionals who value both form and function in their
+      projects.
+    </p>
+  </div>
+
+    <p>
+      Moonasons is committed to providing exceptional customer service and fast delivery across Pakistan. No matter your project size, we ensure you get the best hardware products on time, every time.
+    </p>
+  
+
+
+
+
+</body>
+</html>

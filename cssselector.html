@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Selectors with Hover</title>
+
+  <style type="text/css">
+    p {
+      text-align: center;
+      color: darkgreen;
+    }
+
+    #b22 {
+      font-size: 24px;
+      color: darkblue;
+    }
+
+    #c1 {
+      font-size: 20px;
+      color: brown;
+      font-family: fantasy;
+      background-color: lightgray;
+      padding: 10px;
+    }
+
+    .d2 {
+      font-size: 22px;
+      color: purple;
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: bold;
+    }
+
+    * {
+      color: deeppink;
+    }
+
+    h3, h4, h5 {
+      color: darkred;
+      font-family: 'Georgia', serif;
+      background-color: #d4caca;
+      padding: 8px;
+      border-radius: 5px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* ✅ Correct hover setup */
+    .psudo p {
+      font-size: 18px;
+      color: teal;
+      font-family: 'Verdana', sans-serif;
+      font-style: italic;
+      border: 2px dashed teal;
+      padding: 20px;
+      background-color: #f0f8ff;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    .psudo p:hover {
+      background-color: #5dade2; /* Calm blue hover color */
+      color: #fff; /* White text for better contrast */
+      border-color: #1a5276;
+      transform: scale(1.02);
+    }
+
+    .anchor a:active {
+      color: rgb(187, 255, 0);
+      font-weight: bold;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .anchor a:visited {
+      color: purple;
+      font-style: italic;
+      text-decoration: underline;
+      text-align: center;
+    }
+
+  </style>
+</head>
+
+<body>
+  <p>→ Connects with the feeling of smooth drawer slides and hinges. <br> → Builds emotional warmth and shared purpose.</p>
+
+  <p id="p1">🔒 “Experience the Quiet Strength” <br><br>
+  → Symbolizes the reliability and subtle luxury of MoonaSons hardware.</p>
+
+  <p id="c1">Every architect begins with a dream, and we’re here to finish it with grace.<br>
+  Our hardware quietly carries your vision — from the first sketch to the final touch your clients adore.</p>
+
+  <p class="d2">✨ “See the Beauty Behind Every Motion”
+  <br><br>→ Invites curiosity and emotional connection with craftsmanship.</p>
+
+  <p id="b22">🪶 “Soft on Touch. Strong in Purpose.”
+  <br><br>→ Balances sensory comfort with reliability.</p>
+
+  <p class="d4">🌙 “Where Dreams Meet Design”</p>
+
+  <h2>→ Evokes a sense of tranquility and thoughtful design, appealing to both aesthetics and function.</h2>
+
+  <h2>
+  🏡 “Building Homes, One Detail at a Time”
+  </h2>
+
+  <h3>🛠️ “Crafting Comfort, One Detail at a Time”</h3>
+  <h4>→ Highlights the meticulous attention to detail that defines MoonaSons products.</h4>
+  <h5>🔧 “Engineered for Elegance and Ease”</h5>
+
+  <div class="psudo">
+    <p>
+      → Suggests a blend of sophisticated design and user-friendly functionality. <br>
+      → Appeals to professionals who value both form and function in their projects.
+    </p>
+  </div>
+
+  <div class="anchor">
+    <a href="https://moonasons.pk/" target="_blank" > 
+        Visit MoonaSons for More Inspiration
+    </a>
+
+  </div>
+</body>
+</html>
